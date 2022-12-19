@@ -3,13 +3,13 @@ Hints and Tips on how to avoid using Floating Point, especially useful on resour
 
 Let us consider a 12bit ADC, with a 3V3 reference voltage
 
-Vout_V is the converted voltage, in volts.
-ADC_Count is the measured ADC conversion value
-ADC_Steps is the number of possible conversion values  (2 rasied to the power of 12 for a 12bit ADC e.g 4096)
+ Vout_V is the converted voltage, in volts.
+ ADC_Count is the measured ADC conversion value
+ ADC_Steps is the number of possible conversion values  (2 rasied to the power of 12 for a 12bit ADC e.g 4096)
 
-double Vout_V = 0.0;
-Vout_V = (3.3 / 4096 ) * ADC_Count;
-Vout_V = 0.0008056640625 * ADC_Count;
+ double Vout_V = 0.0;
+ Vout_V = (3.3 / 4096 ) * ADC_Count;
+ Vout_V = 0.0008056640625 * ADC_Count;
 
 [Intesting note here... a float cannot hold 3.3 / 4096 without loss of precision?, a double can (on my equipment)]
 
