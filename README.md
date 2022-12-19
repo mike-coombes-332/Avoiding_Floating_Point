@@ -19,7 +19,8 @@ Good options would be Vout_mV or Vout_uV
 
 [AT THIS POINT WE NEED TO UNDERSTAND OUR REQUIREMENT, ACCURACY + ERROR BUDGET etc....]
 
-Let us say 
+Let us say, that 1mV resultion is adequate for our application.
+
 uint32_t Vout_mV = 0;
 
 Vout_mV = (ADC_Count * 825) >> 10;
