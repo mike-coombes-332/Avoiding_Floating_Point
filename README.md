@@ -11,7 +11,7 @@ double Vout_V = 0.0;
 Vout_V = (3.3 / 4096 ) * ADC_Count;
 Vout_V = 0.0008056640625 * ADC_Count;
 
-[Intesting note here... can floating point store 3.3 / 4096 without loss of precision?]
+[Intesting note here... a float cannot hold 3.3 / 4096 without loss of precision?, a double can (on my equipment)]
 
 So we cannot eliminate floating point unless we change the scale of Vout
 
