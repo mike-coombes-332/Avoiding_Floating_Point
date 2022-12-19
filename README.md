@@ -31,16 +31,18 @@ Vout_mV = (ADC_Count * 825) >> 10;
 
 So the calcualtion we now have for Vout_mV has a multiplication and binary shift (bit shift division)
 
-uint32_t Vout_mV = 0;
-uint32_t ADC_Count = 2048;
+    uint32_t Vout_mV = 0;
+    uint32_t ADC_Count = 2048;
 
-Vout_mV = (ADC_Count * 825) >> 10;
-printf("%d   %d \n\n",Vout_mV,ADC_Count);
+    Vout_mV = (ADC_Count * 825) >> 10;
+    printf("%d   %d \n\n",Vout_mV,ADC_Count);
 
 What do we expect the output to be? Wel ADC_Count is half way between max and min, and so with vref = 3300mV I would expect the value to be half that...
 
-1650   2048
+  1650   2048
 
 So now we have a method of calculating the VOUT voltage to mV resolution without using Floating point using a multiplication and binary shift. So how did id choose * 825 and >>1024
+
+825*1024
 
 
